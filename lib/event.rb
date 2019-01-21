@@ -41,6 +41,13 @@ class Event
     return soon
   end
 
+  def to_s
+  	puts "Titre : #{@title}"
+  	puts "Date de début : #{@start_date}"
+  	puts "Durée : #{length} minutes"
+  	puts "Invités : #{@attendees.join(", ")}"
+  end
+
 
 
 
