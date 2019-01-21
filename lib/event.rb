@@ -19,6 +19,7 @@ class Event
 	def postpone_24h
 		original_date = @start_date
 		@start_date = @start_date + 60 * 60 * 24 # 60secs * 60mn * 24h
+	  return @start_date
 	end
 
   def end_date
@@ -43,16 +44,14 @@ class Event
 
   def to_s
   	puts "Titre : #{@title}"
-  	puts "Date de début : #{@start_date}"
+  	puts "Date de début : #{@start_date.to_s[0...-9]}"
   	puts "Durée : #{length} minutes"
-  	puts "Invités : #{@attendees.join(", ")}"
+  	puts "Invités : #{@attendees.join(",  ")}"
   end
-
-
-
-
 
 end
 
-binding.pry
+stand_up = Event.new("2019-01-13 09:00", 10, "standup quotidien", ["truc@machin.com", "bidule@chose.fr"])
 
+
+#binding.pry

@@ -35,10 +35,10 @@ class User
 end
 
 #création d'un utilisateur dans le fichier pour les tests
-#julie = User.new("julie@mail.com")	#va automatiquement demander le nom 
+julie = User.new("julie@mail.com")	#va automatiquement demander le nom 
 
 #deuxième personnage
-#jean = User.new("jeannot@outlook.fr")	#direct le prog demande le nom
+jean = User.new("jeannot@outlook.fr")	#direct le prog demande le nom
 
 
 
