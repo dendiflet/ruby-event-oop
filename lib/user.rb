@@ -8,11 +8,12 @@ class User
 	def initialize(email_to_save)
 		@email = email_to_save
 		@@user_count = @@user_count + 1
-	  puts "quel est ton prénom stp"
+	  puts "stp quel est ton prénom a enregister avec cet email : #{@email}"
     print "->  "
 		@name = gets.chomp.to_s
 		@@all << {"#{@name}" => @email }
-		puts @@all
+		#affichage de l'array d'utilisateurs
+		#puts @@all
 	end
 
 	def self.user_counter
@@ -25,9 +26,11 @@ class User
 
 end
 
-julie = User.new("julie@mail.com")
+#création d'un utilisateur dans le fichier pour les tests
+julie = User.new("julie@mail.com")	#va automatiquement demander le nom 
 
-jean = User.new("jeannot@outlook.fr")
+#deuxième personnage
+jean = User.new("jeannot@outlook.fr")	#direct le prog demande le nom
 
 binding.pry
 puts "end of file"
